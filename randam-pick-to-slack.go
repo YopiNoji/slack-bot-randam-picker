@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 	// "strings"
-	"time"
+	// "time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -23,11 +23,7 @@ func main() {
 	router.POST("/randam-pick", func(c *gin.Context) {
 		list := []string{"<@U013MCT7PS6>", "<!here>", "<!channel>", "<!everyone>"}
 		// randamize order of list
-		rand.Seed(time.Now().UnixNano()) 
-		for i := range list {
-			j := rand.Intn(i + 1)
-			list[i], list[j] = list[j], list[i]
-		}
+		shuffle(list)
 		r0 := list[0]
 		r1 := list[1]
 		r2 := list[2]
@@ -38,4 +34,12 @@ func main() {
 		})
 	})
 	router.Run(":" + port)
+}
+
+func shuffle(data []string) {
+    n := len(data)
+    for i := n - 1; i >= 0; i-- {
+        j := rand.Intn(i + 1)
+        data[i], data[j] = data[j], data[i]
+    }
 }
