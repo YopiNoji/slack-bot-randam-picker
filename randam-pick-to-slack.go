@@ -22,19 +22,20 @@ func main() {
 
 	router.POST("/randam-pick", func(c *gin.Context) {
 		list := []string{"<@U013MCT7PS6>", "<!here>", "<!channel>", "<!everyone>"}
-		r1 := pickup(list)
-		r2 := pickup(list)
-		r3 := pickup(list)
+		// randamize order of list
+		rand.Seed(time.Now().UnixNano()) 
+		for i := range list {
+			j := rand.Intn(i + 1)
+			list[i], list[j] = list[j], list[i]
+		}
+		r0 := list[0]
+		r1 := list[1]
+		r2 := list[2]
+
 		c.JSON(http.StatusOK, gin.H{
-			"text":          "Hello," + r1 + "," + r2 + "," + r3,
+			"text":          "Hello," + r0 + "," + r1 + "," + r2,
 			"response_type": "in_channel",
 		})
 	})
 	router.Run(":" + port)
-}
-
-func pickup(s []string) string {
-    rand.Seed(time.Now().UnixNano())
-    i := rand.Intn(len(s))
-    return s[i]
 }
