@@ -1,5 +1,5 @@
 {
-	"ImportPath": "randam-pick-slack",
+	"ImportPath": "slack-bot-randam-picker",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v65",
 	"Deps": [

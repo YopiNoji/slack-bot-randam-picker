@@ -1,1 +1,1 @@
-web: randam-pick-slack
+web: slack-bot-randam-picker
