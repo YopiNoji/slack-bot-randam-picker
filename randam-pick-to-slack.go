@@ -21,7 +21,7 @@ func main() {
 	router := gin.Default()
 
 	router.POST("/randam-pick", func(c *gin.Context) {
-		list := []string{"a", "b", "c"}
+		list := []string{"@YopiNoji", "@here", "@channel"}
 		r1 := pickup(list)
 		r2 := pickup(list)
 		c.JSON(http.StatusOK, gin.H{
