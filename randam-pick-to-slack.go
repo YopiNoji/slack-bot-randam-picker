@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
-	"strings"
+	// "strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -32,7 +32,7 @@ func main() {
 	router.Run(":" + port)
 }
 
-func pickup(s []int) int {
+func pickup(s []string) string {
     rand.Seed(time.Now().UnixNano())
     i := rand.Intn(len(s))
     return s[i]
