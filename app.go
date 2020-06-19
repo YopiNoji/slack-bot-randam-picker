@@ -33,6 +33,7 @@ func main() {
 			"<@U012PJND6JJ>", // hayashi
 			"<@UUAPZ7H9B>", // toki
 			"<@U1UEELUER>", // kuroda
+			"<@U4DD2NMGR>", // kizaki
 		}
 		// randamize order of list
 		shuffle(list)
