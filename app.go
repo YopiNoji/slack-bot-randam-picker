@@ -21,7 +21,19 @@ func main() {
 	router := gin.Default()
 
 	router.POST("/randam-pick", func(c *gin.Context) {
-		list := []string{"<@U013MCT7PS6>", "<!here>", "<!channel>", "<!everyone>"}
+		list := []string{
+			"<@UR1DRSR5M>", // yoshiiwa
+			"<@UF73L25CZ>", // yoshihara
+			"<@UUPU8TW5C>", // sakano
+			"<@UULHW149G>", // morishita
+			"<@UQ1FYJHQQ>", // haebaru
+			"<@UUMN40QDN>", // tanaka
+			"<@UUM8RG38U>", // shimogawara
+			"<@UHGQTTGJG>", // tajima
+			"<@U012PJND6JJ>", // hayashi
+			"<@UUAPZ7H9B>", // toki
+			"<@U1UEELUER>", // kuroda
+		}
 		// randamize order of list
 		shuffle(list)
 		r0 := list[0]
@@ -29,7 +41,7 @@ func main() {
 		r2 := list[2]
 
 		c.JSON(http.StatusOK, gin.H{
-			"text":          "Hello," + r0 + "," + r1 + "," + r2,
+			"text":          r0 + ", " + r1 + ", " + r2 + ", I choose you!",
 			"response_type": "in_channel",
 		})
 	})
