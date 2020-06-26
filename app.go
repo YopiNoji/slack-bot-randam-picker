@@ -24,14 +24,14 @@ func main() {
 		list := []string{
 			"<@UR1DRSR5M>", // yoshiiwa
 			"<@UF73L25CZ>", // yoshihara
-			"<@UUPU8TW5C>", // sakano
+			// "<@UUPU8TW5C>", // sakano
 			"<@UULHW149G>", // morishita
 			"<@UQ1FYJHQQ>", // haebaru
-			"<@UUMN40QDN>", // tanaka
+			// "<@UUMN40QDN>", // tanaka
 			"<@UUM8RG38U>", // shimogawara
 			"<@UHGQTTGJG>", // tajima
 			"<@U012PJND6JJ>", // hayashi
-			"<@UUAPZ7H9B>", // toki
+			// "<@UUAPZ7H9B>", // toki
 			"<@U1UEELUER>", // kuroda
 			"<@U4DD2NMGR>", // kizaki
 		}
